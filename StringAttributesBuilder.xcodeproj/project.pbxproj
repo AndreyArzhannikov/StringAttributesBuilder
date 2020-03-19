@@ -108,6 +108,7 @@
 				884737B82423F11100DC7952 /* Sources */,
 				884737B92423F11100DC7952 /* Frameworks */,
 				884737BA2423F11100DC7952 /* Resources */,
+				884737D62423F4EC00DC7952 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -189,6 +190,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		884737D62423F4EC00DC7952 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		884737B82423F11100DC7952 /* Sources */ = {
@@ -355,6 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arzhannikov.StringAttributesBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,6 +401,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arzhannikov.StringAttributesBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
