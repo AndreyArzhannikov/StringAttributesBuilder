@@ -1,0 +1,95 @@
+# Disable rules
+disabled_rules:
+    - identifier_name
+    - file_types_order
+
+# Stop builing if warning count exceeds the value
+warning_threshold: 200
+
+# Enable rules that are disabled by default
+opt_in_rules:
+  - empty_count
+  - block_based_kvo
+  - closure_spacing
+  - closure_body_length
+  - empty_xctest_method
+  - fallthrough
+  - fatal_error_message
+  - file_types_order
+  - last_where
+  - first_where
+  - force_unwrapping
+  - legacy_random
+  - modifier_order
+  - number_separator
+  - private_action
+  - private_outlet
+  - reduce_boolean
+  - redundant_type_annotation
+  - sorted_first_last
+  - statement_position
+  - trailing_closure
+  - unused_declaration
+  - unused_import
+  - vertical_parameter_alignment_on_call
+
+# Configure rules
+modifier_order:
+  preferred_modifier_order:
+    - acl
+    - override
+    - setterACL
+    - dynamic
+    - mutators
+    - lazy
+    - final
+    - required
+    - convenience
+    - typeMethods
+    - owned
+
+trailing_whitespace:
+  ignores_empty_lines: true
+  
+cyclomatic_complexity: 
+  warning: 10
+  error: 12
+
+function_parameter_count:
+  warning: 6
+  error: 7
+
+function_body_length:
+  warning: 30
+  error: 40
+
+closure_body_length:
+  warning: 15
+  error: 20
+
+file_length:
+  warning: 450
+  error: 600
+
+line_length:
+  warning: 150
+  error: 170
+
+nesting:
+  type_level:
+    warning: 2
+
+force_cast: error
+
+force_unwrapping: error
+
+custom_rules:
+  explicit_singleton: # rule identifier
+    included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+    excluded: ".*Test\\.swift" # regex that defines paths to exclude during linting. optional
+    name: "Explicit using singleton" # rule name. optional.
+    regex: "[.]shared| shared " # matching pattern
+    match_kinds: # SyntaxKinds to match. optional.
+      - identifier
+    message: "Explicit using singleton are not allowed. Please use dependecy injection." # violation message. optional.
+    severity: error # violation severity. optional.
