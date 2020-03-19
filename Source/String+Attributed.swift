@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension String {
+public extension String {
 
     func attributed(with attributes: StringAttributes) -> NSAttributedString {
         return NSAttributedString(string: self, attributes: attributes)

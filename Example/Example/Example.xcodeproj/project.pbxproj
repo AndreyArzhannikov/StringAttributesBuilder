@@ -15,6 +15,30 @@
 		884737F82423FFB800DC7952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884737F62423FFB800DC7952 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		884738052424007500DC7952 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 884738002424007500DC7952 /* StringAttributesBuilder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 884737BC2423F11100DC7952;
+			remoteInfo = StringAttributesBuilder;
+		};
+		884738072424007500DC7952 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 884738002424007500DC7952 /* StringAttributesBuilder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 884737C52423F11100DC7952;
+			remoteInfo = StringAttributesBuilderTests;
+		};
+		88473809242400DF00DC7952 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 884738002424007500DC7952 /* StringAttributesBuilder.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 884737BB2423F11100DC7952;
+			remoteInfo = StringAttributesBuilder;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		884737E82423FFB400DC7952 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		884737EB2423FFB400DC7952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +48,7 @@
 		884737F42423FFB800DC7952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		884737F72423FFB800DC7952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		884737F92423FFB800DC7952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884738002424007500DC7952 /* StringAttributesBuilder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StringAttributesBuilder.xcodeproj; path = ../../StringAttributesBuilder.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +67,7 @@
 			children = (
 				884737EA2423FFB400DC7952 /* Example */,
 				884737E92423FFB400DC7952 /* Products */,
+				884738002424007500DC7952 /* StringAttributesBuilder.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +93,15 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		884738012424007500DC7952 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				884738062424007500DC7952 /* StringAttributesBuilder.framework */,
+				884738082424007500DC7952 /* StringAttributesBuilderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,6 +116,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8847380A242400DF00DC7952 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -113,12 +149,35 @@
 			mainGroup = 884737DF2423FFB400DC7952;
 			productRefGroup = 884737E92423FFB400DC7952 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 884738012424007500DC7952 /* Products */;
+					ProjectRef = 884738002424007500DC7952 /* StringAttributesBuilder.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				884737E72423FFB400DC7952 /* Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		884738062424007500DC7952 /* StringAttributesBuilder.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = StringAttributesBuilder.framework;
+			remoteRef = 884738052424007500DC7952 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		884738082424007500DC7952 /* StringAttributesBuilderTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StringAttributesBuilderTests.xctest;
+			remoteRef = 884738072424007500DC7952 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		884737E62423FFB400DC7952 /* Resources */ = {
@@ -145,6 +204,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8847380A242400DF00DC7952 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StringAttributesBuilder;
+			targetProxy = 88473809242400DF00DC7952 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		884737F12423FFB400DC7952 /* Main.storyboard */ = {

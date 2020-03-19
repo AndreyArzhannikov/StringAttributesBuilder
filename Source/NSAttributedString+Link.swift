@@ -13,6 +13,11 @@ public extension NSAttributedString {
      struct Link {
         let text: String
         let url: URL
+
+        public init(text: String, url: URL) {
+            self.text = text
+            self.url = url
+        }
     }
 
     func apply(links: [Link], builder: AttributesBuilder) -> NSAttributedString {

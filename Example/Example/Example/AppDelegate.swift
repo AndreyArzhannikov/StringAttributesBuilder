@@ -6,6 +6,8 @@
 //  Copyright © 2020 Arzhannikov. All rights reserved.
 //
 
+// swiftlint:disable line_length
+
 import UIKit
 
 @UIApplicationMain
@@ -35,3 +37,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// swiftlint:enable line_length
