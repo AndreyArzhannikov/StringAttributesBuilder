@@ -53,7 +53,7 @@
 		884737B22423F11100DC7952 = {
 			isa = PBXGroup;
 			children = (
-				884737BE2423F11100DC7952 /* StringAttributesBuilder */,
+				884737BE2423F11100DC7952 /* Source */,
 				884737C92423F11100DC7952 /* StringAttributesBuilderTests */,
 				884737BD2423F11100DC7952 /* Products */,
 			);
@@ -68,13 +68,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		884737BE2423F11100DC7952 /* StringAttributesBuilder */ = {
+		884737BE2423F11100DC7952 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				884737BF2423F11100DC7952 /* StringAttributesBuilder.h */,
 				884737C02423F11100DC7952 /* Info.plist */,
 			);
-			path = StringAttributesBuilder;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		884737C92423F11100DC7952 /* StringAttributesBuilderTests */ = {
