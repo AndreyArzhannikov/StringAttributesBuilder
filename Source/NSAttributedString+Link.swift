@@ -20,6 +20,10 @@ public extension NSAttributedString {
         }
     }
 
+    var mutableAttributed: NSMutableAttributedString {
+        NSMutableAttributedString(attributedString: self)
+    }
+
     func apply(links: [Link], builder: AttributesBuilder) -> NSAttributedString {
         apply(links: links, attributes: builder.attributes)
     }
@@ -63,9 +67,5 @@ public extension NSAttributedString {
 
     func apply(attributes: StringAttributes, to substring: String) -> NSAttributedString {
         apply(attributes: attributes, to: [substring])
-    }
-
-    var mutableAttributed: NSMutableAttributedString {
-        NSMutableAttributedString(attributedString: self)
     }
 }

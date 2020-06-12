@@ -10,9 +10,7 @@ import UIKit
 
 public final class ParagraphStyleBuilder {
 
-    public var paragraphStyle: NSParagraphStyle {
-        mutableParagraphStyle
-    }
+    public var paragraphStyle: NSParagraphStyle { mutableParagraphStyle }
 
     private var mutableParagraphStyle: NSMutableParagraphStyle = .init()
 
