@@ -2,7 +2,7 @@ name: CI
 on: [pull_request]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     name: "Run Danger"
     steps:
       - uses: actions/checkout@v2
