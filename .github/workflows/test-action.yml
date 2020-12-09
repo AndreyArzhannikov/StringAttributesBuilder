@@ -1,10 +1,28 @@
-name: learn-github-actions
-on: [push]
+name: SwiftLint
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/swiftlint.yml'
+      - '.swiftlint.yml'
+      - '**/*.swift'
+
 jobs:
-  check-bats-version:
+  SwiftLint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
+      - uses: actions/checkout@v1
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1
+      # - name: GitHub Action for SwiftLint with --strict
+      #   uses: norio-nomura/action-swiftlint@3.2.1
+      #   with:
+      #     args: --strict
+      # - name: GitHub Action for SwiftLint (Only files changed in the PR)
+      #   uses: norio-nomura/action-swiftlint@3.2.1
+      #   env:
+      #     DIFF_BASE: ${{ github.base_ref }}
+      # - name: GitHub Action for SwiftLint (Different working directory)
+      #   uses: norio-nomura/action-swiftlint@3.2.1
+      #   env:
+      #     WORKING_DIRECTORY: Source
