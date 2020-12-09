@@ -10,6 +10,10 @@
 		884737C62423F11100DC7952 /* StringAttributesBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884737BC2423F11100DC7952 /* StringAttributesBuilder.framework */; };
 		884737CB2423F11100DC7952 /* StringAttributesBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884737CA2423F11100DC7952 /* StringAttributesBuilderTests.swift */; };
 		884737CD2423F11100DC7952 /* StringAttributesBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 884737BF2423F11100DC7952 /* StringAttributesBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		884737D82423FC8700DC7952 /* AttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884737D72423FC8700DC7952 /* AttributesBuilder.swift */; };
+		884737DA2423FCFE00DC7952 /* String+Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884737D92423FCFE00DC7952 /* String+Attributed.swift */; };
+		884737DC2423FD2D00DC7952 /* ParagraphStyleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884737DB2423FD2D00DC7952 /* ParagraphStyleBuilder.swift */; };
+		884737DE2423FDC000DC7952 /* NSAttributedString+Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884737DD2423FDC000DC7952 /* NSAttributedString+Link.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		884737C52423F11100DC7952 /* StringAttributesBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringAttributesBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		884737CA2423F11100DC7952 /* StringAttributesBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAttributesBuilderTests.swift; sourceTree = "<group>"; };
 		884737CC2423F11100DC7952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884737D72423FC8700DC7952 /* AttributesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesBuilder.swift; sourceTree = "<group>"; };
+		884737D92423FCFE00DC7952 /* String+Attributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Attributed.swift"; sourceTree = "<group>"; };
+		884737DB2423FD2D00DC7952 /* ParagraphStyleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphStyleBuilder.swift; sourceTree = "<group>"; };
+		884737DD2423FDC000DC7952 /* NSAttributedString+Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Link.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +61,7 @@
 		884737B22423F11100DC7952 = {
 			isa = PBXGroup;
 			children = (
-				884737BE2423F11100DC7952 /* StringAttributesBuilder */,
+				884737BE2423F11100DC7952 /* Source */,
 				884737C92423F11100DC7952 /* StringAttributesBuilderTests */,
 				884737BD2423F11100DC7952 /* Products */,
 			);
@@ -68,13 +76,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		884737BE2423F11100DC7952 /* StringAttributesBuilder */ = {
+		884737BE2423F11100DC7952 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				884737BF2423F11100DC7952 /* StringAttributesBuilder.h */,
+				884737D72423FC8700DC7952 /* AttributesBuilder.swift */,
+				884737DD2423FDC000DC7952 /* NSAttributedString+Link.swift */,
+				884737DB2423FD2D00DC7952 /* ParagraphStyleBuilder.swift */,
+				884737D92423FCFE00DC7952 /* String+Attributed.swift */,
 				884737C02423F11100DC7952 /* Info.plist */,
 			);
-			path = StringAttributesBuilder;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		884737C92423F11100DC7952 /* StringAttributesBuilderTests */ = {
@@ -108,6 +120,7 @@
 				884737B82423F11100DC7952 /* Sources */,
 				884737B92423F11100DC7952 /* Frameworks */,
 				884737BA2423F11100DC7952 /* Resources */,
+				884737D62423F4EC00DC7952 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -148,6 +161,7 @@
 				TargetAttributes = {
 					884737BB2423F11100DC7952 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					884737C42423F11100DC7952 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -190,11 +204,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		884737D62423F4EC00DC7952 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		884737B82423F11100DC7952 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884737DC2423FD2D00DC7952 /* ParagraphStyleBuilder.swift in Sources */,
+				884737DE2423FDC000DC7952 /* NSAttributedString+Link.swift in Sources */,
+				884737DA2423FCFE00DC7952 /* String+Attributed.swift in Sources */,
+				884737D82423FC8700DC7952 /* AttributesBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,12 +379,13 @@
 		884737D12423F11100DC7952 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = StringAttributesBuilder/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -355,6 +395,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arzhannikov.StringAttributesBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,12 +405,13 @@
 		884737D22423F11100DC7952 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = StringAttributesBuilder/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arzhannikov.StringAttributesBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,6 +430,7 @@
 		884737D42423F11100DC7952 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StringAttributesBuilderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +448,7 @@
 		884737D52423F11100DC7952 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StringAttributesBuilderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
