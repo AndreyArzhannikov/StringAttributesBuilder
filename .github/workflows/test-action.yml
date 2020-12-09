@@ -26,3 +26,20 @@ jobs:
       #   uses: norio-nomura/action-swiftlint@3.2.1
       #   env:
       #     WORKING_DIRECTORY: Source
+
+
+name: PR lint
+
+on:
+  pull_request:
+    types: ['opened', 'edited', 'reopened', 'synchronize']
+
+jobs:
+  pr-lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: seferov/pr-lint-action@master
+      with:
+        title-regex: '^\[PROJECT-\d*\](\ )'
+        title-regex-flags: 'g' # optional
+        error-message: 'Add Jira ID to your title' # optional
