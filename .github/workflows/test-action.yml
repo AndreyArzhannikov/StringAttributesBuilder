@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: "Run Danger"
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Danger
-        uses: danger/swift@3.3.0
+        uses: danger/swift@master
         env:
           GITHUB_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
