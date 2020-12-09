@@ -1,0 +1,12 @@
+name: CI
+on: [pull_request]
+jobs:
+  build:
+    runs-on: macOS-latest
+    name: "Run Danger"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Danger
+        uses: danger/swift@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
